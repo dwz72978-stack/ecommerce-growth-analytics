@@ -127,8 +127,9 @@ def monthly_revenue_chart(monthly: pd.DataFrame, output: str | Path) -> str:
         body += text(width - right + 10, y + 4, format_int(tick), size=9.5, fill=MUTED)
 
     avg_revenue = float(monthly.loc[~monthly["is_partial"], "revenue"].mean())
-    avg_y = bottom - (avg_revenue / max_rev) * plot_h
-    body += line(left, avg_y, width - right, avg_y, stroke=GOLD, stroke_width=1.2, dash="5 5", opacity=0.75)
+    if not pd.isna(avg_revenue):
+        avg_y = bottom - (avg_revenue / max_rev) * plot_h
+        body += line(left, avg_y, width - right, avg_y, stroke=GOLD, stroke_width=1.2, dash="5 5", opacity=0.75)
 
     points: list[tuple[float, float]] = []
     peak_idx = 0
@@ -618,7 +619,8 @@ def rhythm_heatmap(rhythm: pd.DataFrame, output: str | Path) -> str:
         .fillna(0)
     )
     max_rev = float(pivot.to_numpy().max())
-    vmax = max(1.0, np.quantile(pivot.to_numpy()[pivot.to_numpy() > 0], 0.96) if max_rev > 0 else 1.0)
+    positive = pivot.to_numpy()[pivot.to_numpy() > 0]
+    vmax = max(1.0, float(np.quantile(positive, 0.96)) if positive.size else 1.0)
 
     left, right, top, row_h = 64, 28, 86, 34
     cell_w = (width - left - right) / len(hours)

@@ -468,7 +468,7 @@ def _build_customer(ctx: "AnalysisContext") -> str:
     for row in ctx.segments.itertuples(index=False):
         rows.append(
             (
-                f'<span class="seg-dot" style="background:{row.color}"></span>{esc(row.segment_label)}',
+                f'<span class="seg-dot" style="background:{row.color}"></span><span class="seg-name">{esc(row.segment_label)}</span>',
                 num(int(row.customers)),
                 pct(float(row.customer_share)),
                 pct(float(row.revenue_share)),
@@ -850,6 +850,7 @@ figcaption{font-size:9.5px;line-height:1.6;color:var(--muted);border-top:1px sol
 .dark-big{font-size:38px;font-weight:780;letter-spacing:-.04em;margin-top:8px;line-height:1}
 .dark-callout p{font-size:10.5px;line-height:1.8;color:rgba(255,255,255,.72);margin:10px 0 0}
 .seg-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;vertical-align:1px}
+.seg-name{white-space:nowrap}
 .metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
 .metric-card{border:1px solid var(--line);background:rgba(255,255,255,.66);border-radius:14px;padding:14px 16px}
 .metric-card span{font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}

@@ -2,7 +2,7 @@
   "meta": {
     "project": "E-commerce Growth Analytics",
     "version": "1.0.0",
-    "generated_at": "2026-11-08T20:56:05+08:00",
+    "generated_at": "2026-11-08T21:49:18+08:00",
     "input": "data\\raw\\online_retail.csv.gz",
     "snapshot": "2011-12-10",
     "last_complete_month": "2011-11"
