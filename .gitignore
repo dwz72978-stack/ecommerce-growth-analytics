@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local / CI outputs
+.ci/
+.ci-*/
+.tmp/
+reports/*.tmp
+*.log
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Raw downloads that are not needed in the repo
+data/raw/*.xlsx
+data/raw/*.zip
+data/raw/*.csv
+!data/raw/online_retail.csv.gz

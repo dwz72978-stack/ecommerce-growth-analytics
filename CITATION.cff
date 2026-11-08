@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite the repository and the underlying UCI dataset."
+title: "E-commerce Growth Analytics"
+abstract: "An end-to-end e-commerce analytics project covering data quality, revenue, product Pareto, RFM segmentation, cohort retention, market-basket analysis, and a reproducible static report."
+authors:
+  - family-names: "dwz72978-stack"
+    alias: "dwz72978-stack"
+    website: "https://github.com/dwz72978-stack"
+repository-code: "https://github.com/dwz72978-stack/ecommerce-growth-analytics"
+license: MIT
+keywords:
+  - ecommerce
+  - data-analysis
+  - rfm
+  - cohort-analysis
+  - market-basket-analysis
+  - pandas
+references:
+  - type: dataset
+    title: "Online Retail"
+    authors:
+      - family-names: "Chen"
+        given-names: "Daqing"
+    year: 2015
+    doi: "10.24432/C5BW33"
+    url: "https://archive.ics.uci.edu/dataset/352/online+retail"
