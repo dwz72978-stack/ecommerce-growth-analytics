@@ -9,11 +9,12 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-1F2933?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![pandas](https://img.shields.io/badge/pandas-2.1%2B-150458?style=flat-square&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![CI](https://github.com/dwz72978-stack/ecommerce-growth-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/dwz72978-stack/ecommerce-growth-analytics/actions/workflows/ci.yml)
 [![Tests](https://img.shields.io/badge/tests-unittest-0F766E?style=flat-square)](tests/)
 [![Code](https://img.shields.io/badge/code-MIT-C2410C?style=flat-square)](LICENSE)
 [![Data](https://img.shields.io/badge/data-CC%20BY%204.0-B7791F?style=flat-square)](data/README.md)
 
-[报告](docs/index.html) · [方法](docs/methodology.md) · [数据说明](data/README.md) · [GitHub](https://github.com/dwz72978-stack)
+[在线报告](https://dwz72978-stack.github.io/ecommerce-growth-analytics/) · [源码](https://github.com/dwz72978-stack/ecommerce-growth-analytics) · [方法](docs/methodology.md) · [数据说明](data/README.md)
 
 </div>
 
@@ -29,8 +30,8 @@
 - 工程：纯 Python / pandas，手写 SVG，无 BI 工具、无图表库、无前端框架
 - 复现：数据随仓库提供，一条命令重建全部结果
 
-> 报告文件：[`docs/index.html`](docs/index.html)  
-> 启用 GitHub Pages 后，可直接在线访问（见下方部署说明）。
+> 在线报告：<https://dwz72978-stack.github.io/ecommerce-growth-analytics/>  
+> 报告源文件：[`docs/index.html`](docs/index.html)
 
 <p align="center">
   <img src="docs/assets/report-preview.png" alt="报告首页预览" width="100%">
@@ -194,15 +195,17 @@ ecommerce-growth-analytics/
 
 报告是完全静态的 `docs/index.html`，图表内联，无需服务器。
 
+当前仓库已启用 Pages，在线地址：
+
+<https://dwz72978-stack.github.io/ecommerce-growth-analytics/>
+
+如果需要从零重新部署：
+
 1. 把仓库推到 GitHub。
 2. 打开 **Settings → Pages**。
 3. **Build and deployment → Source** 选择 **Deploy from a branch**。
 4. Branch 选择 `main`，Folder 选择 `/docs`，保存。
-5. 稍等片刻，访问：
-
-```text
-https://dwz72978-stack.github.io/ecommerce-growth-analytics/
-```
+5. 稍等片刻，访问上面的在线地址。
 
 > `docs/.nojekyll` 已加入，避免 Jekyll 处理静态资源。
 
